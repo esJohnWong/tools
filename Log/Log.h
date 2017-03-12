@@ -118,13 +118,13 @@ public:
 	void ErroLog(const std::string &log);
 
 #define Info(log) \
-	InfoLog(LogString("[") + Log::INFOS + "," + __FILE__ + "," + __LINE__ + "," + __FUNCTION__ + "] " + log)
+	InfoLog(LogString(Log::INFOS) + "," + __FILE__ + "," + __LINE__ + "," + __FUNCTION__ + "] " + log)
 
 #define Warn(log) \
-	WarnLog(LogString("[") + Log::WARNS + "," + __FILE__ + "," + __LINE__ + "," + __FUNCTION__ + "] " + log)
+	WarnLog(LogString(Log::INFOS) + "," + __FILE__ + "," + __LINE__ + "," + __FUNCTION__ + "] " + log)
 
 #define Erro(log) \
-	ErroLog(LogString("[") + Log::ERROS + "," + __FILE__ + "," + __LINE__ + "," + __FUNCTION__ + "] " + log)
+	ErroLog(LogString(Log::INFOS) + "," + __FILE__ + "," + __LINE__ + "," + __FUNCTION__ + "] " + log)
 
 private:
 	void WriteLog(const std::string &log);

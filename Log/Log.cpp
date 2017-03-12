@@ -73,7 +73,7 @@ void Log::ErroLog(const std::string &log)
 void Log::WriteLog(const std::string &log)
 {
 	std::ofstream outlog(GetLogFilePath(), std::ios::app);
-	outlog << log << std::endl;
+	outlog << "[" << GetLogTime() << " " << log << std::endl;
 }
 
 std::string Log::GetLogFilePath() const
